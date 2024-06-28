@@ -1,0 +1,45 @@
+.menu-item-card {
+  width: 100%;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item-card:hover {
+  transform: scale(1.03); /* Optional: Grow card on hover */
+}
+
+.menu-item-image {
+  height: 250px; /* Adjust image height */
+  object-fit: cover;
+}
+
+.menu-item-title {
+  font-size: 1.5rem; /* Adjust title font size */
+  font-weight: bold;
+}
+
+.menu-item-category {
+  font-size: 1.1rem; /* Adjust category font size */
+  color: #6c757d; /* Adjust category text color */
+}
+
+.menu-item-price,
+.menu-item-time {
+  font-size: 1.1rem; /* Adjust price and time font size */
+  font-weight: bold;
+  color: #495057; /* Adjust text color */
+}
+
+.menu-item-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.rating-badge {
+  font-size: 1rem; /* Adjust badge font size */
+  padding: 0.5rem 1rem; /* Adjust badge padding */
+  border-radius: 4px; /* Optional: Add border radius */
+  color: white; /* Optional: Set text color to white */
+}
