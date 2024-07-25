@@ -9,6 +9,7 @@ import Feedback from './pages/Feedback';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminOrderManagement from './pages/AdminManagement';
 import AdminSalesReport from './pages/AdminSalesReport';
+import ProfileDashboard from './pages/Dashboard';
 
 const App = () => (
   <Router>
@@ -21,6 +22,7 @@ const App = () => (
       <Route path="/admin" exact element={<AdminDashboard/>} />
       <Route path="/admin/order-management" element={<AdminOrderManagement/>} />
       <Route path="/admin/sales-reports" element={<AdminSalesReport/>} />
+      <Route path="/profile" element={<ProfileDashboard/>} />
     </Routes>
   </Router>
 )

@@ -1,27 +1,62 @@
-import React from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
+// src/Components/LoginModal.js
+import React, { useState } from 'react';
+import { Modal, Button, Form, Alert } from 'react-bootstrap';
+import { loginUser } from '../services'; // Import the loginUser function
 
-const LoginModal = ({ show, handleClose }) => (
-  <Modal show={show} onHide={handleClose} centered>
-    <Modal.Header closeButton style={{ backgroundColor: '#3e3e3e', color: 'white', borderRadius: '10px 10px 0 0' }}>
-      <Modal.Title style={{ fontWeight: 'bold' }}>Login</Modal.Title>
-    </Modal.Header>
-    <Modal.Body style={{ padding: '20px' }}>
-      <Form>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" style={{ border: '1px solid #ced4da', borderRadius: '5px' }} />
-        </Form.Group>
-        <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" style={{ border: '1px solid #ced4da', borderRadius: '5px' }} />
-        </Form.Group>
-        <Button variant="primary" type="submit" style={{ backgroundColor: '#28a745', border: 'none', width: '100%', margin: '10px 0 10px 0' }}>
+const LoginModal = ({ show, handleClose }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleLogin = async () => {
+    try {
+      const data = await loginUser({ email, password });
+      localStorage.setItem('token', data.token);
+      handleClose();
+    } catch (err) {
+      setError('Login failed. Please check your email and password.');
+    }
+  };
+
+  return (
+    <Modal show={show} onHide={handleClose}>
+      <Modal.Header closeButton>
+        <Modal.Title>Login</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Form>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
+        </Form>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={handleClose}>
+          Close
+        </Button>
+        <Button variant="primary" onClick={handleLogin}>
           Login
         </Button>
-      </Form>
-    </Modal.Body>
-  </Modal>
-);
+      </Modal.Footer>
+    </Modal>
+  );
+};
 
 export default LoginModal;
