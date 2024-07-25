@@ -3,26 +3,16 @@ import { Container, Row, Col, ButtonGroup, DropdownButton, Dropdown, Button } fr
 import MenuItemCard from '../Components/MenuItemCard';
 
 const initialMenuItems = [
-    { id: 1, name: 'Pasta', category: 'Italian, Fast Food', price: '50', time: '30', rating: '4.3', image: '/images/pasta.jpg' },
-    { id: 2, name: 'Burger', category: 'Fast Food', price: '80', time: '15', rating: '2.5', image: '/images/burger.jpg' },
-    { id: 3, name: 'Pizza', category: 'Italian, Fast Food', price: '100', time: '20', rating: '4.2', image: '/images/pizza.jpg' },
-    { id: 4, name: 'Sushi Platter', category: 'Japanese, Seafood', price: '120', time: '25', rating: '4.7', image: '/images/sushi.jpg' },
-    { id: 5, name: 'Taco', category: 'Mexican', price: '70', time: '18', rating: '4.0', image: '/images/taco.jpg' },
-    { id: 6, name: 'Chicken Shawarma', category: 'Arabian', price: '60', time: '22', rating: '4.4', image: '/images/shawarma.jpg' },
-    { id: 7, name: 'Salad Bowl', category: 'Healthy, Salad', price: '45', time: '10', rating: '4.1', image: '/images/salad.jpg' },
-    { id: 8, name: 'Pasta', category: 'Italian', price: '85', time: '18', rating: '4.6', image: '/images/pasta.jpg' },
-    { id: 9, name: 'Fish and Chips', category: 'Seafood', price: '95', time: '25', rating: '4.3', image: '/images/fish-chips.jpg' },
-    { id: 10, name: 'Steak', category: 'American, Steakhouse', price: '150', time: '30', rating: '4.8', image: '/images/steak.jpg' },
-    { id: 11, name: 'Fried Rice', category: 'Chinese', price: '65', time: '15', rating: '4.0', image: '/images/fried-rice.jpg' },
-    { id: 12, name: 'Chicken Wings', category: 'American, Fast Food', price: '75', time: '20', rating: '4.5', image: '/images/chicken-wings.jpg' },
-    { id: 13, name: 'Ice Cream Sundae', category: 'Dessert, Ice Cream', price: '40', time: '10', rating: '4.2', image: '/images/ice-cream.jpg' },
-    { id: 14, name: 'Curry and Rice', category: 'Indian', price: '90', time: '25', rating: '4.4', image: '/images/curry-rice.jpg' },
-    { id: 15, name: 'Pho', category: 'Vietnamese, Soup', price: '55', time: '20', rating: '4.1', image: '/images/pho.jpg' },
-    { id: 16, name: 'Burrito', category: 'Mexican', price: '85', time: '18', rating: '4.3', image: '/images/burrito.jpg' },
-    { id: 17, name: 'Dumplings', category: 'Chinese, Dim Sum', price: '60', time: '15', rating: '4.0', image: '/images/dumplings.jpg' },
-    { id: 18, name: 'Sandwich', category: 'Fast Food, Sandwiches', price: '45', time: '10', rating: '4.2', image: '/images/sandwich.jpg' },
-    { id: 19, name: 'Ramen', category: 'Japanese', price: '80', time: '22', rating: '4.6', image: '/images/ramen.jpg' },
-    { id: 20, name: 'Paella', category: 'Spanish, Seafood', price: '110', time: '30', rating: '4.7', image: '/images/paella.jpg' }  
+    { id: 1, name: 'Pasta', category: 'Italian, Fast Food', price: '50', time: '30', rating: '4.3', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 2, name: 'Burger', category: 'Fast Food', price: '80', time: '15', rating: '2.5', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 3, name: 'Pizza', category: 'Italian, Fast Food', price: '100', time: '20', rating: '4.2', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 4, name: 'Sushi Platter', category: 'Japanese, Seafood', price: '120', time: '25', rating: '4.7', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 5, name: 'Taco', category: 'Mexican', price: '70', time: '18', rating: '4.0', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 6, name: 'Chicken Shawarma', category: 'Arabian', price: '60', time: '22', rating: '4.4', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 7, name: 'Salad Bowl', category: 'Healthy, Salad', price: '45', time: '10', rating: '4.1', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 8, name: 'Pasta', category: 'Italian', price: '85', time: '18', rating: '4.6', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 9, name: 'Fish and Chips', category: 'Seafood', price: '95', time: '25', rating: '4.3', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' },
+    { id: 10, name: 'Steak', category: 'American, Steakhouse', price: '150', time: '30', rating: '4.8', image: 'https://th.bing.com/th/id/OIP.h8hGT3urjXTOyrI8lXYQoQHaE8?rs=1&pid=ImgDetMain' } 
 ];
 
 const Menu = () => {
@@ -57,11 +47,6 @@ const Menu = () => {
               <Button variant="outline-primary" onClick={() => handleFilter('American')}>American</Button>
               <Button variant="outline-primary" onClick={() => handleFilter('Chinese')}>Chinese</Button>
               <Button variant="outline-primary" onClick={() => handleFilter('Dessert')}>Dessert</Button>
-              <Button variant="outline-primary" onClick={() => handleFilter('Indian')}>Indian</Button>
-              <Button variant="outline-primary" onClick={() => handleFilter('Vietnamese')}>Vietnamese</Button>
-              <Button variant="outline-primary" onClick={() => handleFilter('Dim Sum')}>Dim Sum</Button>
-              <Button variant="outline-primary" onClick={() => handleFilter('Sandwiches')}>Sandwiches</Button>
-              <Button variant="outline-primary" onClick={() => handleFilter('Spanish')}>Spanish</Button>
             </ButtonGroup>
             <DropdownButton
               className="d-lg-none"

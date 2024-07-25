@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Playwrite';
+    src: url('./css/PlayWrite.ttf');
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('./css/Bebas.ttf');
+}
+
+body {
+    font-family: 'BebasNeue', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}

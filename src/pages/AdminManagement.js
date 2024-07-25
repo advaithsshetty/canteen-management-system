@@ -4,13 +4,11 @@ import { Container, Row, Col, Card, Button, Modal, Form, ToggleButton, ToggleBut
 const initialOrders = [
   { id: 1, item: 'Pasta', date: '2024-06-01', status: 'Delivered', special: true },
   { id: 2, item: 'Burger', date: '2024-06-02', status: 'Preparing', special: false },
-  // Add more orders as needed
 ];
 
 const initialMenuItems = [
   { id: 1, name: 'Pasta', category: 'Lunch', description: 'Delicious pasta with tomato sauce', price: 100, image: '/images/pasta.jpg', popular: true },
   { id: 2, name: 'Burger', category: 'Snacks', description: 'Juicy burger with cheese', price: 80, image: '/images/burger.jpg', popular: false },
-  // Add more menu items as needed
 ];
 
 const AdminOrderManagement = () => {
@@ -18,7 +16,7 @@ const AdminOrderManagement = () => {
   const [menuItems, setMenuItems] = useState(initialMenuItems);
   const [showModal, setShowModal] = useState(false);
   const [modalItem, setModalItem] = useState({ id: '', name: '', category: '', description: '', price: '', image: '', popular: false });
-  const [activeSection, setActiveSection] = useState('orders'); // 'orders' or 'menu'
+  const [activeSection, setActiveSection] = useState('orders');
 
   const handleShowModal = (item) => {
     setModalItem(item);

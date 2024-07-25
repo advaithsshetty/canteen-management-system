@@ -1,0 +1,27 @@
+/* src/components/Navbar.css */
+.header {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #343a40; /* Adjust color as needed */
+  }
+  
+  @media (max-width: 767px) {
+    .header {
+      font-size: 1.5rem; /* Adjust size for smaller screens */
+    }
+  }
+  
+  /* NavbarStyles.css */
+.large-navbar {
+    font-size: 1.2rem; /* Increase font size */
+    padding: 1rem 1.5rem; /* Increase padding for larger size */
+  }
+  
+  .large-navbar .navbar-brand {
+    font-size: 1.5rem; /* Increase font size for brand */
+  }
+  
+  .large-navbar .nav-link {
+    font-size: 1.2rem; /* Increase font size for nav links */
+  }
+  

@@ -1,34 +1,34 @@
 .menu-item-card {
   width: 100%;
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
 .menu-item-card:hover {
-  transform: scale(1.03); /* Optional: Grow card on hover */
+  transform: scale(1.03);
 }
 
 .menu-item-image {
-  height: 250px; /* Adjust image height */
+  height: 250px;
   object-fit: cover;
 }
 
 .menu-item-title {
-  font-size: 1.5rem; /* Adjust title font size */
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .menu-item-category {
-  font-size: 1.1rem; /* Adjust category font size */
-  color: #6c757d; /* Adjust category text color */
+  font-size: 1.1rem;
+  color: #6c757d;
 }
 
 .menu-item-price,
 .menu-item-time {
-  font-size: 1.1rem; /* Adjust price and time font size */
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #495057; /* Adjust text color */
+  color: #495057;
 }
 
 .menu-item-rating {
@@ -38,8 +38,8 @@
 }
 
 .rating-badge {
-  font-size: 1rem; /* Adjust badge font size */
-  padding: 0.5rem 1rem; /* Adjust badge padding */
-  border-radius: 4px; /* Optional: Add border radius */
-  color: white; /* Optional: Set text color to white */
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: white;
 }

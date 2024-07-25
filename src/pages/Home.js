@@ -1,6 +1,6 @@
-// src/pages/Home.js
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import './home.css'
 
 const Home = () => (
   <Container className="mt-5">
@@ -9,7 +9,32 @@ const Home = () => (
         <h1 className="display-5 fw-bold">Welcome to CMS</h1>
         <p className="col-md-8 fs-4">Order your favorite meals quickly and easily.</p>
       </div>
-    </div>
+    </div>   
+    <Row className="mt-5">
+      <Col>
+        <h2>Popular Items</h2>
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://shef.com/homemade-food/wp-content/uploads/tabletop-spread-of-authentic-indian-food.jpg"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://shef.com/homemade-food/wp-content/uploads/tabletop-spread-of-authentic-indian-food.jpg"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://shef.com/homemade-food/wp-content/uploads/tabletop-spread-of-authentic-indian-food.jpg"
+            />
+          </Carousel.Item>
+        </Carousel>
+      </Col>
+    </Row>
     <Row>
       <Col>
         <h2>About Us</h2>
